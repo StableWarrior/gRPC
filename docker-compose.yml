@@ -1,0 +1,12 @@
+version: '3'
+services:
+
+  app:
+    container_name: "gRPC"
+    build:
+      dockerfile: Dockerfile
+    stop_signal: SIGKILL
+    ports:
+      - '50051:50051'
+    expose:
+      - 50051
