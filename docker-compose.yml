@@ -7,6 +7,6 @@ services:
       dockerfile: Dockerfile
     stop_signal: SIGKILL
     ports:
-      - '50051:50051'
+      - '8000:8000'
     expose:
-      - 50051
+      - 8000

@@ -11,10 +11,10 @@ def run():
 
     kvstore_pb2_grpc.add_KeyValueStoreServicer_to_server(KeyValueStoreService(), server)
 
-    server.add_insecure_port("[::]:50051")
+    server.add_insecure_port("[::]:8000")
     server.start()
 
-    print("Server started on port 50051")
+    print("Server started on port 8000")
 
     server.wait_for_termination()
 
