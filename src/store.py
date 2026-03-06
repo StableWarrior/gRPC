@@ -44,10 +44,10 @@ class KVStore:
 
             return value
 
-    # def delete(self, key):
-    #     with self.lock:
-    #         if key in self.data:
-    #             del self.data[key]
+    def delete(self, key):
+        with self.lock:
+            if key in self.data:
+                del self.data[key]
 
     def list(self, prefix):
         result = []

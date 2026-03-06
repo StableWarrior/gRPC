@@ -21,9 +21,9 @@ class KeyValueStoreService(KeyValueStoreServicer):
 
         return kvstore_pb2.GetResponse(value=value)
 
-    # def Delete(self, request, context):
-    #     self.store.delete(request.key)
-    #     return kvstore_pb2.DeleteResponse()
+    def Delete(self, request, context):
+        self.store.delete(request.key)
+        return kvstore_pb2.DeleteResponse()
 
     def List(self, request, context):
         items = self.store.list(request.prefix)
